@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quality Management System - PT Karya Presisi Indonesia</title>
+    <meta name="description" content="ISO 9001:2015 certified quality management system. Learn about our quality control process, testing equipment, and commitment to excellence.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="font-body text-primary-text">
+
+    <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-deep-blue rounded-lg flex items-center justify-center">
+                            <span class="text-white font-heading font-bold text-xl">KPI</span>
+                        </div>
+                        <div class="hidden md:block">
+                            <div class="text-deep-blue font-heading font-bold text-lg">PT Karya Presisi</div>
+                            <div class="text-secondary-text text-xs">Precision Manufacturing</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About Us</a>
+                    <a href="products.html" class="nav-link">Products</a>
+                    <a href="facilities.html" class="nav-link">Facilities</a>
+                    <a href="quality.html" class="nav-link active">Quality</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+
+                <div class="hidden lg:block">
+                    <a href="contact.html" class="btn-primary">Request Quote</a>
+                </div>
+
+                <button id="mobile-menu-button" class="lg:hidden text-deep-blue focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-200">
+            <div class="container mx-auto px-4 py-4 space-y-3">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+                <a href="about.html" class="mobile-nav-link">About Us</a>
+                <a href="products.html" class="mobile-nav-link">Products</a>
+                <a href="facilities.html" class="mobile-nav-link">Facilities</a>
+                <a href="quality.html" class="mobile-nav-link active">Quality</a>
+                <a href="contact.html" class="mobile-nav-link">Contact</a>
+                <a href="contact.html" class="btn-primary block text-center">Request Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-hero bg-gradient-to-r from-deep-blue to-medium-blue text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://media.istockphoto.com/id/527045000/id/foto/manajer-wanita-bekerja-pada-tablet-di-pabrik.jpg?s=612x612&w=0&k=20&c=Rh3GOmSdCcFytkiy0uC7I1bF3Uk_wNDL6ufaq2J0qMg=');"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/70 to-black/50"></div>
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <nav class="breadcrumb mb-4" style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">
+                <a href="index.html" class="hover:text-light-blue">Home</a>
+                <span class="mx-2">/</span>
+                <span>Quality</span>
+            </nav>
+            <h1 class="font-heading font-bold text-4xl md:text-5xl mb-4" style="text-shadow: 0 4px 12px rgba(0,0,0,0.9);">Quality Management System</h1>
+            <p class="text-lg md:text-xl opacity-90 max-w-2xl mx-auto" style="text-shadow: 0 2px 6px rgba(0,0,0,0.8);">
+                Committed to Excellence in Every Product
+            </p>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://kualitasprimasertifikasi.com/wp-content/uploads/2018/12/iso-9001.jpg" alt="ISO 9001:2015 Certificate" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-emerald-green rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h2 class="font-heading font-bold text-3xl md:text-4xl text-deep-blue">ISO 9001:2015 Certified</h2>
+                            <p class="text-medium-blue font-semibold">Quality Management System</p>
+                        </div>
+                    </div>
+                    <p class="text-secondary-text leading-relaxed mb-4">
+                        PT Karya Presisi Indonesia is certified under ISO 9001:2015 Quality Management System, demonstrating our commitment to delivering consistent quality and continuous improvement in all aspects of our operations.
+                    </p>
+                    <p class="text-secondary-text leading-relaxed mb-6">
+                        Our certification scope covers the manufacturing of precision components for automotive and heavy equipment industries. We undergo regular audits to ensure compliance with international quality standards.
+                    </p>
+                    <div class="bg-section-bg rounded-lg p-6">
+                        <h3 class="font-heading font-semibold text-lg text-deep-blue mb-3">Certification Details</h3>
+                        <ul class="space-y-2 text-secondary-text">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-emerald-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span><strong>Standard:</strong> ISO 9001:2015</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-emerald-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span><strong>Scope:</strong> Precision Component Manufacturing</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-emerald-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span><strong>First Certified:</strong> 2012</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-emerald-green mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span><strong>Audit Frequency:</strong> Annual Surveillance</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-20 bg-section-bg">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="font-heading font-bold text-3xl md:text-4xl text-deep-blue mb-4">
+                    Quality Control Process
+                </h2>
+                <p class="text-secondary-text text-lg max-w-2xl mx-auto">
+                    Our comprehensive 4-stage quality control ensures every product meets exact specifications
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="process-step">
+                    <div class="font-heading font-bold text-6xl text-deep-blue opacity-10 mb-4">01</div>
+                    <div class="process-icon bg-deep-blue">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading font-semibold text-xl text-deep-blue mb-3">Incoming Inspection</h3>
+                    <ul class="space-y-2 text-sm text-secondary-text">
+                        <li class="flex items-start">
+                            <span class="w-1.5 h-1.5 bg-medium-blue rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                            <span>Material verification against specifications</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-1.5 h-1.5 bg-medium-blue rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                            <span>Supplier quality assessment</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-1.5 h-1.5 bg-medium-blue rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                            <span>Material certificate review</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-1.5 h-1.5 bg-medium-blue rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                            <span>Documentation verification</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="process-step">
+                    <div class="font-heading font-bold text-6xl text-medium-blue opacity-10 mb-4">02</div>
+                    <div class="process-icon bg-medium-blue">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading font-semibold text-xl text-deep-blue mb-3">In-Process Control</h3>
+                    <ul class="space-y-2 text-sm text-secondary-text">
+                        <li class="flex items-start">
+                            <span class="w-1.5 h-1.5 bg-medium-blue rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                            <span>Continuous production monitoring</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-1.5 h-1.5 bg-medium-blue rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                            <span>Dimensional inspection at key stages</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-1.5 h-1.5 bg-medium-blue rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                            <span>Process parameter control</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-1.5 h-1.5 bg-medium-blue rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                            <span>Real-time quality checks</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="process-step">
+                    <div class="font-heading font-bold text-6xl text-emerald-green opacity-10 mb-4">03</div>
+                    <div class="process-icon bg-emerald-green">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading font-semibold text-xl text-deep-blue mb-3">Final Inspection</h3>
+                    <ul class="space-y-2 text-sm text-secondary-text">
+                        <li class="flex items-start">
+                            <span class="w-1.5 h-1.5 bg-medium-blue rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                            <span>100% product inspection</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-1.5 h-1.5 bg-medium-blue rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                            <span>CMM dimensional measurement</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-1.5 h-1.5 bg-medium-blue rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                            <span>Functional testing procedures</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-1.5 h-1.5 bg-medium-blue rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                            <span>Visual inspection standards</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="process-step">
+                    <div class="font-heading font-bold text-6xl text-amber opacity-10 mb-4">04</div>
+                    <div class="process-icon bg-amber">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading font-semibold text-xl text-deep-blue mb-3">Documentation</h3>
+                    <ul class="space-y-2 text-sm text-secondary-text">
+                        <li class="flex items-start">
+                            <span class="w-1.5 h-1.5 bg-medium-blue rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                            <span>Test certificates generation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-1.5 h-1.5 bg-medium-blue rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                            <span>Detailed inspection reports</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-1.5 h-1.5 bg-medium-blue rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                            <span>Complete material traceability</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-1.5 h-1.5 bg-medium-blue rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                            <span>Customer approval records</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="font-heading font-bold text-3xl md:text-4xl text-deep-blue mb-4">
+                    Testing Equipment
+                </h2>
+                <p class="text-secondary-text text-lg max-w-2xl mx-auto">
+                    Advanced measurement and testing tools for precise quality verification
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="testing-equipment-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-deep-blue rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-heading font-semibold text-lg text-deep-blue">CMM 3D Measurement</h3>
+                    </div>
+                    <p class="text-secondary-text text-sm mb-3">
+                        Coordinate Measuring Machine for high-precision dimensional verification with accuracy up to ±0.001mm.
+                    </p>
+                    <div class="flex items-center text-sm text-emerald-green">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span>Accuracy: ±0.001mm</span>
+                    </div>
+                </div>
+
+                <div class="testing-equipment-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-medium-blue rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-heading font-semibold text-lg text-deep-blue">Hardness Tester</h3>
+                    </div>
+                    <p class="text-secondary-text text-sm mb-3">
+                        Rockwell and Vickers hardness testing equipment to verify material properties and heat treatment results.
+                    </p>
+                    <div class="flex items-center text-sm text-emerald-green">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span>Rockwell & Vickers</span>
+                    </div>
+                </div>
+
+                <div class="testing-equipment-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-emerald-green rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-heading font-semibold text-lg text-deep-blue">Surface Roughness Tester</h3>
+                    </div>
+                    <p class="text-secondary-text text-sm mb-3">
+                        Precision measurement of surface finish quality to ensure optimal component performance and longevity.
+                    </p>
+                    <div class="flex items-center text-sm text-emerald-green">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span>Ra, Rz Parameters</span>
+                    </div>
+                </div>
+
+                <div class="testing-equipment-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-amber rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-heading font-semibold text-lg text-deep-blue">Optical Microscope</h3>
+                    </div>
+                    <p class="text-secondary-text text-sm mb-3">
+                        High-resolution optical and digital microscopes for detailed visual inspection and defect analysis.
+                    </p>
+                    <div class="flex items-center text-sm text-emerald-green">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span>Up to 1000x Magnification</span>
+                    </div>
+                </div>
+
+                <div class="testing-equipment-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-deep-blue rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-heading font-semibold text-lg text-deep-blue">Measuring Instruments</h3>
+                    </div>
+                    <p class="text-secondary-text text-sm mb-3">
+                        Complete set of precision measuring tools including micrometers, calipers, and gauges for dimensional control.
+                    </p>
+                    <div class="flex items-center text-sm text-emerald-green">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span>Calibrated Regularly</span>
+                    </div>
+                </div>
+
+                <div class="testing-equipment-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-medium-blue rounded-lg flex items-center justify-center mr-4">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-heading font-semibold text-lg text-deep-blue">Material Testing</h3>
+                    </div>
+                    <p class="text-secondary-text text-sm mb-3">
+                        Comprehensive material testing capabilities including tensile strength, chemical composition analysis.
+                    </p>
+                    <div class="flex items-center text-sm text-emerald-green">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span>Full Traceability</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-20 bg-dark-gray text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-deep-blue/30 to-medium-blue/30"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="font-heading font-bold text-3xl md:text-4xl mb-4">
+                    Quality Performance Metrics
+                </h2>
+                <p class="text-lg opacity-90">
+                    Our commitment to quality excellence in numbers
+                </p>
+            </div>
+
+            <div class="max-w-5xl mx-auto">
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all">
+                        <div class="font-heading font-bold text-5xl md:text-6xl mb-3 text-emerald-green">99.5%</div>
+                        <div class="text-lg font-semibold mb-1">Pass Rate</div>
+                        <div class="text-sm opacity-80">First Time Quality</div>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all">
+                        <div class="font-heading font-bold text-5xl md:text-6xl mb-3 text-emerald-green">0</div>
+                        <div class="text-lg font-semibold mb-1">Defect Target</div>
+                        <div class="text-sm opacity-80">Zero Defect Goal</div>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all">
+                        <div class="font-heading font-bold text-5xl md:text-6xl mb-3 text-emerald-green">100%</div>
+                        <div class="text-lg font-semibold mb-1">Inspection</div>
+                        <div class="text-sm opacity-80">Full Product Coverage</div>
+                    </div>
+
+                    <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all">
+                        <div class="font-heading font-bold text-5xl md:text-6xl mb-3 text-emerald-green">12+</div>
+                        <div class="text-lg font-semibold mb-1">Years</div>
+                        <div class="text-sm opacity-80">ISO Certified</div>
+                    </div>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-8">
+                    <h3 class="font-heading font-semibold text-2xl mb-6 text-center">Quality Metrics Trend</h3>
+                    <canvas id="qualityChart" class="w-full" style="max-height: 300px;"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="font-heading font-bold text-3xl md:text-4xl text-deep-blue mb-4">
+                        Quality Standards & Commitment
+                    </h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="quality-commitment-card">
+                        <h3 class="font-heading font-semibold text-xl text-deep-blue mb-4">Material Specifications</h3>
+                        <p class="text-secondary-text leading-relaxed">
+                            All materials are sourced from certified suppliers and strictly follow specified standards. Material certificates are verified and maintained for full traceability.
+                        </p>
+                    </div>
+
+                    <div class="quality-commitment-card">
+                        <h3 class="font-heading font-semibold text-xl text-deep-blue mb-4">Statistical Process Control</h3>
+                        <p class="text-secondary-text leading-relaxed">
+                            We implement SPC techniques to monitor and control production processes, enabling early detection and prevention of potential quality issues.
+                        </p>
+                    </div>
+
+                    <div class="quality-commitment-card">
+                        <h3 class="font-heading font-semibold text-xl text-deep-blue mb-4">Full Traceability System</h3>
+                        <p class="text-secondary-text leading-relaxed">
+                            Complete traceability from raw material to finished product, including production batch records, inspection data, and delivery documentation.
+                        </p>
+                    </div>
+
+                    <div class="quality-commitment-card">
+                        <h3 class="font-heading font-semibold text-xl text-deep-blue mb-4">Customer Requirements</h3>
+                        <p class="text-secondary-text leading-relaxed">
+                            We work closely with customers to understand and meet their specific quality requirements, including custom testing and documentation needs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-20 bg-section-bg">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="font-heading font-bold text-3xl md:text-4xl text-deep-blue mb-6">
+                    Continuous Improvement
+                </h2>
+                <p class="text-secondary-text text-lg leading-relaxed mb-8">
+                    Quality excellence is not a destination but a continuous journey. We are committed to ongoing improvement through regular internal audits, employee training programs, systematic corrective action procedures, and fostering a culture of quality awareness throughout our organization.
+                </p>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="improvement-card">
+                        <div class="w-16 h-16 bg-deep-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-heading font-semibold text-lg text-deep-blue mb-2">Regular Audits</h3>
+                        <p class="text-secondary-text text-sm">Internal and external quality system audits</p>
+                    </div>
+
+                    <div class="improvement-card">
+                        <div class="w-16 h-16 bg-medium-blue rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-heading font-semibold text-lg text-deep-blue mb-2">Training Programs</h3>
+                        <p class="text-secondary-text text-sm">Continuous employee skill development</p>
+                    </div>
+
+                    <div class="improvement-card">
+                        <div class="w-16 h-16 bg-emerald-green rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-heading font-semibold text-lg text-deep-blue mb-2">Quality Culture</h3>
+                        <p class="text-secondary-text text-sm">Company-wide quality awareness initiatives</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark-gray text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-12 h-12 bg-medium-blue rounded-lg flex items-center justify-center">
+                            <span class="text-white font-heading font-bold text-xl">KPI</span>
+                        </div>
+                        <div>
+                            <div class="font-heading font-bold text-lg">PT Karya Presisi</div>
+                            <div class="text-light-gray text-xs">Precision Manufacturing</div>
+                        </div>
+                    </div>
+                    <p class="text-light-gray text-sm leading-relaxed mb-4">
+                        Leading precision component manufacturer for automotive and heavy equipment since 2010. ISO 9001:2015 certified.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="font-heading font-semibold text-lg mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="products.html" class="footer-link">Products</a></li>
+                        <li><a href="facilities.html" class="footer-link">Facilities</a></li>
+                        <li><a href="quality.html" class="footer-link">Quality</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-heading font-semibold text-lg mb-4">Contact Info</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span class="text-light-gray">Jl. Industri Raya No. 456, Cikarang Barat, Bekasi 17530, Indonesia</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            <span class="text-light-gray">+62 21 8901 5678</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <span class="text-light-gray">info@karyapresisi.co.id</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-heading font-semibold text-lg mb-4">Follow Us</h3>
+                    <div class="flex space-x-3 mb-6">
+                        <a href="#" class="social-icon">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <a href="https://bagasaria93.github.io" class="inline-flex items-center text-sm text-light-gray hover:text-white transition-colors">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                        </svg>
+                        Back to Portfolio
+                    </a>
+                </div>
+            </div>
+
+            <div class="border-t border-medium-gray pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center text-sm text-light-gray">
+                    <p>&copy; 2024 PT Karya Presisi Indonesia. All rights reserved.</p>
+                    <p class="mt-2 md:mt-0">Developed by <a href="https://github.com/bagasaria93" class="text-medium-blue hover:text-light-blue transition-colors">Bagas Aria Sativa</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        const ctx = document.getElementById('qualityChart').getContext('2d');
+        const qualityChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                datasets: [{
+                    label: 'Pass Rate (%)',
+                    data: [98.5, 99.0, 99.2, 99.3, 99.5, 99.4, 99.6, 99.5, 99.7, 99.5, 99.6, 99.5],
+                    borderColor: '#10b981',
+                    backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                    tension: 0.4,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        min: 98,
+                        max: 100,
+                        ticks: {
+                            color: 'rgba(255, 255, 255, 0.8)'
+                        },
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            color: 'rgba(255, 255, 255, 0.8)'
+                        },
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

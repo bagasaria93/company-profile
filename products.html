@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - PT Karya Presisi Indonesia</title>
+    <meta name="description" content="Browse our precision components for automotive and heavy equipment: engine components, hydraulic systems, electrical systems, and transmission parts.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body class="font-body text-primary-text">
+
+    <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-deep-blue rounded-lg flex items-center justify-center">
+                            <span class="text-white font-heading font-bold text-xl">KPI</span>
+                        </div>
+                        <div class="hidden md:block">
+                            <div class="text-deep-blue font-heading font-bold text-lg">PT Karya Presisi</div>
+                            <div class="text-secondary-text text-xs">Precision Manufacturing</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About Us</a>
+                    <a href="products.html" class="nav-link active">Products</a>
+                    <a href="facilities.html" class="nav-link">Facilities</a>
+                    <a href="quality.html" class="nav-link">Quality</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+
+                <div class="hidden lg:block">
+                    <a href="contact.html" class="btn-primary">Request Quote</a>
+                </div>
+
+                <button id="mobile-menu-button" class="lg:hidden text-deep-blue focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-200">
+            <div class="container mx-auto px-4 py-4 space-y-3">
+                <a href="index.html" class="mobile-nav-link">Home</a>
+                <a href="about.html" class="mobile-nav-link">About Us</a>
+                <a href="products.html" class="mobile-nav-link active">Products</a>
+                <a href="facilities.html" class="mobile-nav-link">Facilities</a>
+                <a href="quality.html" class="mobile-nav-link">Quality</a>
+                <a href="contact.html" class="mobile-nav-link">Contact</a>
+                <a href="contact.html" class="btn-primary block text-center">Request Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-hero bg-gradient-to-r from-deep-blue to-medium-blue text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://img.freepik.com/free-photo/robotic-arms-sorting-packages-conveyor-belt_23-2152005497.jpg?semt=ais_hybrid&w=740&q=80');"></div>
+        
+        <!-- Overlay hitam dengan gradient -->
+        <div class="absolute inset-0 bg-gradient-to-b from-black/70 to-black/50"></div>
+        
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <nav class="breadcrumb mb-4" style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">
+                <a href="index.html" class="hover:text-light-blue">Home</a>
+                <span class="mx-2">/</span>
+                <span>Products</span>
+            </nav>
+            
+            <h1 class="font-heading font-bold text-4xl md:text-5xl mb-4" style="text-shadow: 0 4px 12px rgba(0,0,0,0.9);">
+                Our Products
+            </h1>
+            
+            <p class="text-lg md:text-xl opacity-90 max-w-2xl mx-auto" style="text-shadow: 0 2px 6px rgba(0,0,0,0.8);">
+                Precision Components for Automotive & Heavy Equipment
+            </p>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <p class="text-secondary-text text-lg max-w-3xl mx-auto">
+                    We manufacture high-precision components using state-of-the-art CNC machinery and quality materials. All products are manufactured to meet international standards and customer specifications.
+                </p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-3 mb-12">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="engine">Engine Components</button>
+                <button class="filter-btn" data-filter="hydraulic">Hydraulic Systems</button>
+                <button class="filter-btn" data-filter="electrical">Electrical Systems</button>
+                <button class="filter-btn" data-filter="transmission">Transmission Parts</button>
+            </div>
+
+            <div id="product-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="product-card" data-category="engine">
+                    <div class="product-image-wrapper">
+                        <img src="https://media.istockphoto.com/id/490267829/id/foto/piston-mesin-v6-gambar-3d.jpg?s=612x612&w=0&k=20&c=Ke2ESNDsGfP0bPlZq5JkstKY-5AR92yufciAbRyEbww=" alt="Piston Assembly" class="product-image">
+                        <span class="product-badge bg-deep-blue">Engine Components</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading font-semibold text-xl text-deep-blue mb-3">Piston Assembly</h3>
+                        <p class="text-secondary-text text-sm mb-4">
+                            High-precision pistons designed for diesel engines with superior durability and performance.
+                        </p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-start text-sm text-secondary-text">
+                                <svg class="w-5 h-5 text-emerald-green mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Material: Aluminum Alloy
+                            </li>
+                            <li class="flex items-start text-sm text-secondary-text">
+                                <svg class="w-5 h-5 text-emerald-green mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Tolerance: ±0.01mm
+                            </li>
+                            <li class="flex items-start text-sm text-secondary-text">
+                                <svg class="w-5 h-5 text-emerald-green mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Heat-treated for strength
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="btn-secondary w-full text-center">Request Quote</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="engine">
+                    <div class="product-image-wrapper">
+                        <img src="https://media.istockphoto.com/id/1158759858/id/foto/blok-mesin-mobil.jpg?s=612x612&w=0&k=20&c=pV0toCu4cMetWI7ZESwfLKlMD4xmDwyMpRfTg3cNPFA=" alt="Cylinder Head" class="product-image">
+                        <span class="product-badge bg-deep-blue">Engine Components</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading font-semibold text-xl text-deep-blue mb-3">Cylinder Head</h3>
+                        <p class="text-secondary-text text-sm mb-4">
+                            Precision-machined cylinder heads with optimal combustion chamber design for maximum efficiency.
+                        </p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-start text-sm text-secondary-text">
+                                <svg class="w-5 h-5 text-emerald-green mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Material: Cast Iron
+                            </li>
+                            <li class="flex items-start text-sm text-secondary-text">
+                                <svg class="w-5 h-5 text-emerald-green mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Pressure tested
+                            </li>
+                            <li class="flex items-start text-sm text-secondary-text">
+                                <svg class="w-5 h-5 text-emerald-green mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Optimized design
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="btn-secondary w-full text-center">Request Quote</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="engine">
+                    <div class="product-image-wrapper">
+                        <img src="https://media.istockphoto.com/id/184611810/id/foto/engkol-mesin-terisolasi-pada-latar-belakang-putih.jpg?s=612x612&w=0&k=20&c=tGFPJwU8w2MKH6_-hVcUMRWsHBFbF8PyAVly6FxwUwY=" alt="Crankshaft" class="product-image">
+                        <span class="product-badge bg-deep-blue">Engine Components</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading font-semibold text-xl text-deep-blue mb-3">Crankshaft</h3>
+                        <p class="text-secondary-text text-sm mb-4">
+                            Forged steel crankshafts precision-balanced for heavy-duty engine applications.
+                        </p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-start text-sm text-secondary-text">
+                                <svg class="w-5 h-5 text-emerald-green mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Forged steel construction
+                            </li>
+                            <li class="flex items-start text-sm text-secondary-text">
+                                <svg class="w-5 h-5 text-emerald-green mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Precision balanced
+                            </li>
+                            <li class="flex items-start text-sm text-secondary-text">
+                                <svg class="w-5 h-5 text-emerald-green mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Heavy-duty applications
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="btn-secondary w-full text-center">Request Quote</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="engine">
+                    <div class="product-image-wrapper">
+                        <img src="https://media.istockphoto.com/id/1364211716/id/video/batang-penghubung-baru-untuk-mesin-yang-berbeda-terletak-berdampingan-di-jendela.avif?s=640x640&k=20&c=IMx2QV-Ffd442v-BzBD4FXMEQQPH_YdOsZ1aeXPOGmg=" alt="Connecting Rod" class="product-image">
+                        <span class="product-badge bg-deep-blue">Engine Components</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading font-semibold text-xl text-deep-blue mb-3">Connecting Rod</h3>
+                        <p class="text-secondary-text text-sm mb-4">
+                            High-strength steel connecting rods with shot-peened surface for extended durability.
+                        </p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-start text-sm text-secondary-text">
+                                <svg class="w-5 h-5 text-emerald-green mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                High-strength steel
+                            </li>
+                            <li class="flex items-start text-sm text-secondary-text">
+                                <svg class="w-5 h-5 text-emerald-green mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Shot-peened surface
+                            </li>
+                            <li class="flex items-start text-sm text-secondary-text">
+                                <svg class="w-5 h-5 text-emerald-green mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Fatigue tested
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="btn-secondary w-full text-center">Request Quote</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="hydraulic">
+                    <div class="product-image-wrapper">
+                        <img src="https://thumbs.dreamstime.com/b/hydraulic-pump-showroom-close-up-industry-405136725.jpg" alt="Hydraulic Pump" class="product-image">
+                        <span class="product-badge bg-emerald-green">Hydraulic Systems</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading font-semibold text-xl text-deep-blue mb-3">Hydraulic Pump</h3>
+                        <p class="text-secondary-text text-sm mb-4">
+                            High-performance hydraulic pumps designed for excavators and bulldozers with reliable performance.
+                        </p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-start text-sm text-secondary-text">
+                                <svg class="w-5 h-5 text-emerald-green mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Flow rate: 250 L/min
+                            </li>
+                            <li class="flex items-start text-sm text-secondary-text">
+                                <svg class="w-5 h-5 text-emerald-green mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Pressure: 350 bar
+                            </li>
+                            <li class="flex items-start text-sm text-secondary-text">
+                                <svg class="w-5 h-5 text-emerald-green mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Heavy equipment compatible
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="btn-secondary w-full text-center">Request Quote</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="hydraulic">
+                    <div class="product-image-wrapper">
+                        <img src="data:image/jpeg;base64,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" class="product-image">
+                        <span class="product-badge bg-emerald-green">Hydraulic Systems</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading font-semibold text-xl text-deep-blue mb-3">Hydraulic Cylinder</h3>
+                        <p class="text-secondary-text text-sm mb-4">
+                            Custom hydraulic cylinders with various bore sizes for diverse heavy-duty applications.
+                        </p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-start text-sm text-secondary-text">
+                                <svg class="w-5 h-5 text-emerald-green mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Bore size: 80-250mm
+                            </li>
+                            <li class="flex items-start text-sm text-secondary-text">
+                                <svg class="w-5 h-5 text-emerald-green mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Custom stroke available
+                            </li>
+                            <li class="flex items-start text-sm text-secondary-text">
+                                <svg class="w-5 h-5 text-emerald-green mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Heavy-duty design
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="btn-secondary w-full text-center">Request Quote</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="hydraulic">
+                    <div class="product-image-wrapper">
+                        <img src="https://img.freepik.com/free-photo/steel-pipelines-cables-plant_1359-849.jpg?semt=ais_hybrid&w=740&q=80" alt="Control Valve" class="product-image">
+                        <span class="product-badge bg-emerald-green">Hydraulic Systems</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading font-semibold text-xl text-deep-blue mb-3">Control Valve</h3>
+                        <p class="text-secondary-text text-sm mb-4">
+                            Precision directional control valves with proportional flow control for accurate operation.
+                        </p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-start text-sm text-secondary-text">
+                                <svg class="w-5 h-5 text-emerald-green mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Directional control
+                            </li>
+                            <li class="flex items-start text-sm text-secondary-text">
+                                <svg class="w-5 h-5 text-emerald-green mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Proportional flow control
+                            </li>
+                            <li class="flex items-start text-sm text-secondary-text">
+                                <svg class="w-5 h-5 text-emerald-green mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Leak-proof design
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="btn-secondary w-full text-center">Request Quote</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="electrical">
+                    <div class="product-image-wrapper">
+                        <img src="data:image/jpeg;base64,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" alt="Alternator" class="product-image">
+                        <span class="product-badge bg-amber">Electrical Systems</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading font-semibold text-xl text-deep-blue mb-3">Alternator</h3>
+                        <p class="text-secondary-text text-sm mb-4">
+                            Heavy-duty alternators with weather-resistant construction for reliable power generation.
+                        </p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-start text-sm text-secondary-text">
+                                <svg class="w-5 h-5 text-emerald-green mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Output: 24V 80A
+                            </li>
+                            <li class="flex items-start text-sm text-secondary-text">
+                                <svg class="w-5 h-5 text-emerald-green mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Heavy-duty construction
+                            </li>
+                            <li class="flex items-start text-sm text-secondary-text">
+                                <svg class="w-5 h-5 text-emerald-green mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Weather resistant
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="btn-secondary w-full text-center">Request Quote</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="electrical">
+                    <div class="product-image-wrapper">
+                        <img src="https://thumbs.dreamstime.com/b/photorealistic-image-starter-motor-racetrack-389666605.jpg" alt="Starter Motor" class="product-image">
+                        <span class="product-badge bg-amber">Electrical Systems</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading font-semibold text-xl text-deep-blue mb-3">Starter Motor</h3>
+                        <p class="text-secondary-text text-sm mb-4">
+                            High-torque starter motors specifically designed for heavy-duty diesel engines.
+                        </p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-start text-sm text-secondary-text">
+                                <svg class="w-5 h-5 text-emerald-green mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                24V, 5.5 kW
+                            </li>
+                            <li class="flex items-start text-sm text-secondary-text">
+                                <svg class="w-5 h-5 text-emerald-green mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                High torque output
+                            </li>
+                            <li class="flex items-start text-sm text-secondary-text">
+                                <svg class="w-5 h-5 text-emerald-green mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                For diesel engines
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="btn-secondary w-full text-center">Request Quote</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="electrical">
+                    <div class="product-image-wrapper">
+                        <img src="https://t3.ftcdn.net/jpg/06/21/96/24/360_F_621962414_4btHKw7wYnD1c1IMwgy7elpTfq6qDMl7.jpg" alt="Wiring Harness" class="product-image">
+                        <span class="product-badge bg-amber">Electrical Systems</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading font-semibold text-xl text-deep-blue mb-3">Wiring Harness</h3>
+                        <p class="text-secondary-text text-sm mb-4">
+                            Custom wiring harness assemblies with heat and oil resistant materials for OEM quality.
+                        </p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-start text-sm text-secondary-text">
+                                <svg class="w-5 h-5 text-emerald-green mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Custom configurations
+                            </li>
+                            <li class="flex items-start text-sm text-secondary-text">
+                                <svg class="w-5 h-5 text-emerald-green mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Heat & oil resistant
+                            </li>
+                            <li class="flex items-start text-sm text-secondary-text">
+                                <svg class="w-5 h-5 text-emerald-green mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                OEM quality standards
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="btn-secondary w-full text-center">Request Quote</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="transmission">
+                    <div class="product-image-wrapper">
+                        <img src="data:image/jpeg;base64,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" alt="Gearbox Assembly" class="product-image">
+                        <span class="product-badge bg-medium-blue">Transmission Parts</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading font-semibold text-xl text-deep-blue mb-3">Gearbox Assembly</h3>
+                        <p class="text-secondary-text text-sm mb-4">
+                            Precision-machined gearbox assemblies with hardened steel gears for maximum durability.
+                        </p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-start text-sm text-secondary-text">
+                                <svg class="w-5 h-5 text-emerald-green mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Hardened steel gears
+                            </li>
+                            <li class="flex items-start text-sm text-secondary-text">
+                                <svg class="w-5 h-5 text-emerald-green mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Custom ratios available
+                            </li>
+                            <li class="flex items-start text-sm text-secondary-text">
+                                <svg class="w-5 h-5 text-emerald-green mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Precision machined
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="btn-secondary w-full text-center">Request Quote</a>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="transmission">
+                    <div class="product-image-wrapper">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ3_RWYrkMqR_ARNj02M-GO_bPqAaLyOhGnw&s" alt="Clutch Assembly" class="product-image">
+                        <span class="product-badge bg-medium-blue">Transmission Parts</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-heading font-semibold text-xl text-deep-blue mb-3">Clutch Assembly</h3>
+                        <p class="text-secondary-text text-sm mb-4">
+                            Heavy-duty clutch assemblies with heat-resistant materials for demanding applications.
+                        </p>
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-start text-sm text-secondary-text">
+                                <svg class="w-5 h-5 text-emerald-green mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Diameter: 350-430mm
+                            </li>
+                            <li class="flex items-start text-sm text-secondary-text">
+                                <svg class="w-5 h-5 text-emerald-green mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Heat resistant material
+                            </li>
+                            <li class="flex items-start text-sm text-secondary-text">
+                                <svg class="w-5 h-5 text-emerald-green mr-2 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                Heavy-duty application
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="btn-secondary w-full text-center">Request Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-20 bg-section-bg">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="font-heading font-bold text-3xl md:text-4xl text-deep-blue mb-4">
+                    Product Features
+                </h2>
+                <p class="text-secondary-text text-lg max-w-2xl mx-auto">
+                    Why our precision components stand out
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="feature-card">
+                    <div class="feature-icon bg-emerald-green">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading font-semibold text-xl text-deep-blue mb-3">ISO Certified</h3>
+                    <p class="text-secondary-text">
+                        All products manufactured under ISO 9001:2015 quality management system.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon bg-medium-blue">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading font-semibold text-xl text-deep-blue mb-3">Competitive Pricing</h3>
+                    <p class="text-secondary-text">
+                        Best value for premium quality products with flexible payment terms.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon bg-amber">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading font-semibold text-xl text-deep-blue mb-3">Fast Delivery</h3>
+                    <p class="text-secondary-text">
+                        Standard lead time of 4-6 weeks with efficient logistics management.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon bg-deep-blue">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading font-semibold text-xl text-deep-blue mb-3">Custom Orders</h3>
+                    <p class="text-secondary-text">
+                        We accept custom orders based on your technical drawings and specifications.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark-gray text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-12 h-12 bg-medium-blue rounded-lg flex items-center justify-center">
+                            <span class="text-white font-heading font-bold text-xl">KPI</span>
+                        </div>
+                        <div>
+                            <div class="font-heading font-bold text-lg">PT Karya Presisi</div>
+                            <div class="text-light-gray text-xs">Precision Manufacturing</div>
+                        </div>
+                    </div>
+                    <p class="text-light-gray text-sm leading-relaxed mb-4">
+                        Leading precision component manufacturer for automotive and heavy equipment since 2010. ISO 9001:2015 certified.
+                    </p>
+                </div>
+
+                <div>
+                    <h3 class="font-heading font-semibold text-lg mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="products.html" class="footer-link">Products</a></li>
+                        <li><a href="facilities.html" class="footer-link">Facilities</a></li>
+                        <li><a href="quality.html" class="footer-link">Quality</a></li>
+                        <li><a href="contact.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-heading font-semibold text-lg mb-4">Contact Info</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span class="text-light-gray">Jl. Industri Raya No. 456, Cikarang Barat, Bekasi 17530, Indonesia</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            <span class="text-light-gray">+62 21 8901 5678</span>
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            <span class="text-light-gray">info@karyapresisi.co.id</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-heading font-semibold text-lg mb-4">Follow Us</h3>
+                    <div class="flex space-x-3 mb-6">
+                        <a href="#" class="social-icon">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <a href="https://bagasaria93.github.io" class="inline-flex items-center text-sm text-light-gray hover:text-white transition-colors">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                        </svg>
+                        Back to Portfolio
+                    </a>
+                </div>
+            </div>
+
+            <div class="border-t border-medium-gray pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center text-sm text-light-gray">
+                    <p>&copy; 2024 PT Karya Presisi Indonesia. All rights reserved.</p>
+                    <p class="mt-2 md:mt-0">Developed by <a href="https://github.com/bagasaria93" class="text-medium-blue hover:text-light-blue transition-colors">Bagas Aria Sativa</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/filter.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
